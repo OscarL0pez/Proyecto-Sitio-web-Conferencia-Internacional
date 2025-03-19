@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - Conferencia Internacional 2025</title>
+    <link rel="stylesheet" href="../styles/registro.css">
+</head>
+<body>
+    <header>
+        <div class="logo-text">
+            FORMULARIO DE REGISTRO
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../main/index.html">Inicio</a></li>
+                <li><a href="contenido.html">Agenda</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <form action="#" method="post" enctype="multipart/form-data">
+            <!-- Datos Personales -->
+            <fieldset>
+                <legend>Datos Personales</legend>
+                <label for="nombre">Nombre y Apellido:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password" minlength="6" required>
+                
+                <label for="fecha-nacimiento">Fecha de Nacimiento:</label>
+                <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" required>
+            </fieldset>
+            
+            <!-- Información de Contacto -->
+            <fieldset>
+                <legend>Información de Contacto</legend>
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" required>
+                
+                <label for="direccion">Dirección:</label>
+                <input type="text" id="direccion" name="direccion" required>
+            </fieldset>
+            
+            <!-- Preferencias del Evento -->
+            <fieldset>
+                <legend>Preferencias del Evento</legend>
+            
+                <label for="pais">País:</label>
+                <select id="pais" name="pais" required>
+                    <option value="">Seleccione un país</option>
+                    <option value="es">España</option>
+                    <option value="mx">México</option>
+                    <option value="ar">Argentina</option>
+                    <option value="co">Colombia</option>
+                    <option value="us">Estados Unidos</option>
+                    <option value="cl">Chile</option>
+                </select>
+            
+                <div class="talleres-container">
+                    <label>Talleres:</label>
+                    <div class="talleres">
+                        <label><input type="checkbox" name="taller" value="desarrollo"> Desarrollo Web</label>
+                        <label><input type="checkbox" name="taller" value="ia"> Inteligencia Artificial</label>
+                        <label><input type="checkbox" name="taller" value="diseño"> Diseño UX</label>
+                    </div>
+                </div>
+            
+                <div class="sesion-container">
+                    <label>Sesión Principal:</label>
+                    <div class="sesion">
+                        <label><input type="radio" name="sesion" value="matutina" required> Matutina</label>
+                        <label><input type="radio" name="sesion" value="vespertina"> Vespertina</label>
+                    </div>
+                </div>
+            </fieldset>
+            
+            
+            <!-- Subir Archivo -->
+            <fieldset>
+                <legend>Sube tu CV o Portafolio</legend>
+                <input type="file" name="cv" required>
+            </fieldset>
+            
+            <!-- Comentarios -->
+            <fieldset>
+                <legend>Comentarios Adicionales</legend>
+                <textarea name="comentarios" rows="4" placeholder="Escribe aquí tus observaciones..."></textarea>
+            </fieldset>
+            
+            <!-- Información de Pago -->
+<fieldset>
+    <legend>Información de Pago</legend>
+    <label for="nombre-titular">Nombre del Titular:</label>
+
+    <input type="text" id="nombre-titular" name="nombre-titular" placeholder="Nombre y Apellidos" required>
+    <label for="tarjeta">Número de Tarjeta de Crédito:</label>
+    
+    <input type="text" id="tarjeta" name="tarjeta" pattern="\d{16}" placeholder="1234 5678 9012 3456" required>
+    <label for="cvv">Código de Seguridad (CVV):</label>
+    
+    <input type="text" id="cvv" name="cvv" pattern="\d{3}" placeholder="123" required>
+    <label for="expiracion">Fecha de Expiración:</label>
+    
+    <input type="month" id="expiracion" name="expiracion" required>
+            <!-- Botón de Pago -->
+    <button type="submit" class="btn-pagar">Proceder al Pago</button>
+</fieldset>
+
+            <!-- Botones -->
+            <button type="submit">Enviar Registro</button>
+            <button type="reset">Reiniciar</button>
+        </form>
+    </main>
+    
+    <footer>
+        <p>© 2025 Conferencia Internacional</p>
+    </footer>
+</body>
+</html>
