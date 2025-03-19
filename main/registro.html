@@ -5,16 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro - Conferencia Internacional 2025</title>
     <link rel="stylesheet" href="../styles/registro.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+    <!-- Header Section -->
     <header>
-        <div class="logo-text">
-            FORMULARIO DE REGISTRO
+        <div class="logo">
+            <img src="/assets/logn.jpg" alt="Logo Conferencia">
+            <div class="logo-text">
+                <h1>FORMULARIO DE</h1>
+                <h1>REGISTRO</h1>
+            </div>
         </div>
         <nav>
             <ul>
                 <li><a href="../main/index.html">Inicio</a></li>
-                <li><a href="contenido.html">Agenda</a></li>
+                <li><a href="contenido.html">Detalles del Evento</a></li>
             </ul>
         </nav>
     </header>
@@ -26,15 +32,19 @@
                 <legend>Datos Personales</legend>
                 <label for="nombre">Nombre y Apellido:</label>
                 <input type="text" id="nombre" name="nombre" required>
+                <small>Por favor, ingrese su nombre completo.</small>
                 
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
+                <small>Ingrese una dirección de correo electrónico válida.</small>
                 
                 <label for="password">Contraseña:</label>
                 <input type="password" id="password" name="password" minlength="6" required>
+                <small>La contraseña debe tener al menos 6 caracteres.</small>
                 
                 <label for="fecha-nacimiento">Fecha de Nacimiento:</label>
                 <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" required>
+                <small>Seleccione su fecha de nacimiento.</small>
             </fieldset>
             
             <!-- Información de Contacto -->
@@ -42,9 +52,11 @@
                 <legend>Información de Contacto</legend>
                 <label for="telefono">Teléfono:</label>
                 <input type="tel" id="telefono" name="telefono" required>
+                <small>Ingrese su número de teléfono.</small>
                 
                 <label for="direccion">Dirección:</label>
                 <input type="text" id="direccion" name="direccion" required>
+                <small>Ingrese su dirección completa.</small>
             </fieldset>
             
             <!-- Preferencias del Evento -->
@@ -61,6 +73,7 @@
                     <option value="us">Estados Unidos</option>
                     <option value="cl">Chile</option>
                 </select>
+                <small>Seleccione su país de residencia.</small>
             
                 <div class="talleres-container">
                     <label>Talleres:</label>
@@ -69,6 +82,7 @@
                         <label><input type="checkbox" name="taller" value="ia"> Inteligencia Artificial</label>
                         <label><input type="checkbox" name="taller" value="diseño"> Diseño UX</label>
                     </div>
+                    <small>Seleccione los talleres a los que desea asistir.</small>
                 </div>
             
                 <div class="sesion-container">
@@ -77,40 +91,46 @@
                         <label><input type="radio" name="sesion" value="matutina" required> Matutina</label>
                         <label><input type="radio" name="sesion" value="vespertina"> Vespertina</label>
                     </div>
+                    <small>Seleccione la sesión principal a la que desea asistir.</small>
                 </div>
             </fieldset>
-            
             
             <!-- Subir Archivo -->
             <fieldset>
                 <legend>Sube tu CV o Portafolio</legend>
                 <input type="file" name="cv" required>
+                <small>Suba su CV o portafolio en formato PDF.</small>
             </fieldset>
             
             <!-- Comentarios -->
             <fieldset>
                 <legend>Comentarios Adicionales</legend>
                 <textarea name="comentarios" rows="4" placeholder="Escribe aquí tus observaciones..."></textarea>
+                <small>Ingrese cualquier comentario adicional que desee compartir.</small>
             </fieldset>
             
             <!-- Información de Pago -->
-<fieldset>
-    <legend>Información de Pago</legend>
-    <label for="nombre-titular">Nombre del Titular:</label>
-
-    <input type="text" id="nombre-titular" name="nombre-titular" placeholder="Nombre y Apellidos" required>
-    <label for="tarjeta">Número de Tarjeta de Crédito:</label>
-    
-    <input type="text" id="tarjeta" name="tarjeta" pattern="\d{16}" placeholder="1234 5678 9012 3456" required>
-    <label for="cvv">Código de Seguridad (CVV):</label>
-    
-    <input type="text" id="cvv" name="cvv" pattern="\d{3}" placeholder="123" required>
-    <label for="expiracion">Fecha de Expiración:</label>
-    
-    <input type="month" id="expiracion" name="expiracion" required>
-            <!-- Botón de Pago -->
-    <button type="submit" class="btn-pagar">Proceder al Pago</button>
-</fieldset>
+            <fieldset>
+                <legend>Información de Pago</legend>
+                <label for="nombre-titular">Nombre del Titular:</label>
+                <input type="text" id="nombre-titular" name="nombre-titular" placeholder="Nombre y Apellidos" required>
+                <small>Ingrese el nombre del titular de la tarjeta.</small>
+                
+                <label for="tarjeta">Número de Tarjeta de Crédito:</label>
+                <input type="text" id="tarjeta" name="tarjeta" pattern="\d{16}" placeholder="1234 5678 9012 3456" required>
+                <small>Ingrese el número de tarjeta de crédito (16 dígitos).</small>
+                
+                <label for="cvv">Código de Seguridad (CVV):</label>
+                <input type="text" id="cvv" name="cvv" pattern="\d{3}" placeholder="123" required>
+                <small>Ingrese el código de seguridad (3 dígitos).</small>
+                
+                <label for="expiracion">Fecha de Expiración:</label>
+                <input type="month" id="expiracion" name="expiracion" required>
+                <small>Seleccione la fecha de expiración de la tarjeta.</small>
+                
+                <!-- Botón de Pago -->
+                <button type="submit" class="btn-pagar">Proceder al Pago</button>
+            </fieldset>
 
             <!-- Botones -->
             <button type="submit">Enviar Registro</button>
@@ -121,5 +141,13 @@
     <footer>
         <p>© 2025 Conferencia Internacional</p>
     </footer>
+
+    <!-- JavaScript para ocultar el header al hacer scroll -->
+    <script>
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            header.classList.toggle('hidden', window.scrollY > 50);
+        });
+    </script>
 </body>
 </html>
