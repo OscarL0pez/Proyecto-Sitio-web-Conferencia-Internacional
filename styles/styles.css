@@ -7,12 +7,9 @@
 
 /* Estilos generales */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
-    padding-top: 70px;
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    color: #fff;
+    font-family: 'Orbitron', sans-serif;
 }
 
 header {
@@ -79,6 +76,8 @@ nav ul li a {
 
 /* Hero Section */
 .hero {
+    margin: 0;
+    padding: 0;
     background: url('/assets/back.webp') no-repeat center center/cover;
     height: 100vh;
     display: flex;
@@ -87,7 +86,7 @@ nav ul li a {
     text-align: center;
     color: white;
     position: relative;
-    margin-top: px; 
+    margin-top: 80px; /* Ajusta este valor según la altura del header */
 }
 
 .hero-content {
@@ -123,36 +122,235 @@ nav ul li a {
 .btn:hover {
     background-color: #0056A2;
     transform: translateY(-0.125rem);
+
+}.btn1 {
+    background-color: darkorange;
+    color: white;
+    padding: 0.625rem 1.25rem;
+    text-decoration: none;
+    font-size: 1.125rem;
+    border-radius: 0.3125rem;
+    box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn1:hover {
+    background-color: darkgoldenrod;
+    transform: translateY(-0.125rem);
 }
 
 /* Descripción */
 .descripcion {
-    background: white;
+    background: linear-gradient(135deg, #1f1c2c, #928dab);
     padding: 2.5rem;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     gap: 1.25rem;
     text-align: left;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: white;
 }
 
 .descripcion img {
-    max-width: 50%;
+    max-width: 40%;
     height: auto;
     border-radius: 0.625rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .descripcion-content {
-    max-width: 50%;
+    max-width: 55%;
 }
 
 .descripcion h2 {
-    color: #0056A2;
-    font-size: 1.625rem;
+    color: #00c6ff;
+    font-size: 2rem;
     margin-bottom: 0.625rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .descripcion p {
-    font-size: 1rem;
+    font-size: 1.125rem;
     line-height: 1.6;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Contenedor general */
+.detalles {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+/* Título principal */
+.titulo-detalles {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #00d4ff;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(0, 212, 255, 0.8);
+}
+
+/* Grid de los recuadros */
+.detalles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* Estilos de los recuadros */
+.detalle-box {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    border: 2px solid rgba(0, 212, 255, 0.7);
+}
+
+/* Efecto dinámico al pasar el ratón */
+.detalle-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 20px rgba(0, 212, 255, 1);
+}
+
+/* Tipografía dentro de los recuadros */
+.detalle-box h3 {
+    font-size: 20px;
+    color: #00d4ff;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.detalle-box p, .detalle-box ul {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #d1d1d1;
+}
+
+/* Estilos específicos para cada cuadro */
+#lugar {
+    background: rgba(50, 50, 50, 0.3);
+}
+#objetivos {
+    background: rgba(0, 212, 255, 0.2);
+}
+#fecha {
+    background: rgba(50, 50, 50, 0.3);
+}
+
+/* Alinear texto dentro de los recuadros */
+.detalle-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #222;
+    color: white;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    border-radius: 0 0 10px 10px;
+}
+
+/* Ajustes para móviles */
+@media (max-width: 768px) {
+    .detalles-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Ajustes para móviles */
+@media (max-width: 768px) {
+    .detalles-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* Media Queries */
+@media (max-width: 1200px) {
+    .hero-content {
+        width: 70%;
+        padding: 50px;
+    }
+
+    .descripcion {
+        flex-direction: column;
+        padding: 2rem;
+    }
+
+    .descripcion img, .descripcion-content {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        height: 50vh;
+    }
+
+    .hero-content {
+        width: 80%;
+        padding: 40px;
+    }
+
+    .descripcion {
+        padding: 1.5rem;
+    }
+
+    .btn {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        padding: 10px 20px;
+    }
+
+    .logo img {
+        height: 2.5rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .hero {
+        height: 40vh;
+    }
+
+    .hero-content {
+        width: 90%;
+        padding: 30px;
+    }
+
+    .descripcion {
+        padding: 1rem;
+    }
+
+    .descripcion h2 {
+        font-size: 1.5rem;
+    }
+
+    .descripcion p {
+        font-size: 0.875rem;
+    }
+
+    .btn {
+        font-size: 0.875rem;
+        padding: 0.5rem 0.875rem;
+    }
 }
