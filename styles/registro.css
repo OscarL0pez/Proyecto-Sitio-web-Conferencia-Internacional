@@ -1,4 +1,4 @@
-/* Estilos generales */
+/* Estilos generales ----------------------------------------------------------------------*/
 body {
     height: 100%;
     width: 100%;
@@ -9,7 +9,7 @@ body {
     padding: 0;
 }
 
-/* Estilos del header */
+/* Estilos del header -----------------------------------------------------------------------*/
 header {
     display: flex;
     align-items: center;
@@ -52,7 +52,7 @@ header.hidden {
     color: #00d4ff;
 }
 
-/* Estilos de la navegación ------------------------------------------------*/
+/* Estilos de la navegación ---------------------------------------------------------------------*/
 nav {
     display: flex;
     align-items: center;
@@ -77,7 +77,7 @@ nav ul li a {
     font-weight: bold;
 }
 
-/* Estilos del contenido principal ------------------------------------------- */
+/* Estilos del contenido principal ------------------------------------------------------------------------------*/
 main {
     max-width: 800px;
     margin: 100px auto 40px auto;
@@ -87,7 +87,7 @@ main {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilos del formulario ------------------------------------------------------*/
+/* Estilos del formulario ---------------------------------------------------------------------------------------*/
 form {
     display: flex;
     flex-direction: column;
@@ -194,6 +194,7 @@ input#cvv {
     width: 20%;
 }
 
+/* Estilos del botón de pago ----------------------------------------------------------------------------------------------*/
 .btn-pagar {
     width: 40%;
     background: linear-gradient(90deg, #ff7e00, #ff3c00);
@@ -215,6 +216,7 @@ input#cvv {
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
 }
 
+/* Estilo boton enviar------------------------------------------------------------------ */
 button {
     background: linear-gradient(90deg, #0072ff, #00c3ff);
     color: white;
@@ -233,12 +235,22 @@ button:hover {
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* Contenedor de botones ----------------------------------------------------*/
+/* Estilo del botón de reiniciar ---------------------------------------------------------------*/
+button.reset-btn {
+    background: linear-gradient(90deg, #ff0000, #ff7f7f);
+}
+
+button.reset-btn:hover {
+    background: linear-gradient(90deg, #ff7f7f, #ff0000);
+}
+
+/* Contenedor de botones-------------------------------------------------------------------------- */
 .button-container {
     display: flex;
     justify-content: space-between;
 }
 
+/* Estilos del footer -----------------------------------------------------------------*/
 footer {
     text-align: center;
     padding: 15px;
