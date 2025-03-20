@@ -1,3 +1,4 @@
+/* Estilos generales ----------------------------------------*/
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -6,6 +7,7 @@ body {
     padding: 0;
 }
 
+/* Estilos del header ------------------------------------------*/
 header {
     display: flex;
     align-items: center;
@@ -44,6 +46,7 @@ header {
     color: #00d4ff;
 }
 
+/* Estilos de la navegación---------------------------------------------------- */
 nav {
     display: flex;
     align-items: center;
@@ -68,8 +71,9 @@ nav ul li a {
     font-weight: bold;
 }
 
+/* Estilos del contenido principal -----------------------------------------------*/
 main {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 100px auto 40px auto;
     padding: 20px;
     background: white;
@@ -83,30 +87,32 @@ h2 {
     margin-bottom: 20px;
 }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
+/* Estilos de la agenda ----------------------------------------------------------*/
+.agenda-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
 }
 
-table, th, td {
-    border: 1px solid #ddd;
+.agenda-item {
+    background: #e3f2fd;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-th, td {
-    padding: 12px;
-    text-align: left;
+.agenda-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
 
-th {
-    background-color: #0056b3;
-    color: white;
+.agenda-item h3 {
+    margin-top: 0;
+    color: #0056b3;
 }
 
-tbody tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
-
+/* Estilos del footer -----------------------------------------------------------------*/
 footer {
     text-align: center;
     padding: 15px;
@@ -117,41 +123,6 @@ footer {
     border-radius: 0 0 10px 10px;
 }
 
-/* Detalles Section */
-.detalles {
-    text-align: center;
-    padding: 50px 20px;
-}
-
-/* Título principal */
-.titulo-detalles {
-    font-size: 32px;
-    font-weight: bold;
-    margin-bottom: 30px;
-    color: #00d4ff;
-    text-transform: uppercase;
-    text-shadow: 0 0 10px rgba(0, 212, 255, 0.8);
-}
-
-/* Grid de los recuadros */
-.detalles-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    max-width: 1000px;
-    margin: auto;
-}
-
-/* Estilos de los recuadros */
-.detalle-box {
-    background: rgba(0, 0, 0, 0.6);
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: center;
-    border: 2px solid rgba(0, 212, 255, 0.7);
-}
 /* Media Queries */
 
 /* Tablets */
@@ -197,7 +168,11 @@ footer {
         padding: 10px;
     }
 
-    table, th, td {
-        font-size: 14px;
+    .agenda-item {
+        padding: 15px;
+    }
+
+    .agenda-item h3 {
+        font-size: 1.2rem;
     }
 }

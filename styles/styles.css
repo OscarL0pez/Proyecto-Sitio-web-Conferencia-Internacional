@@ -1,4 +1,4 @@
-/* CSS Reset */
+/* CSS */
 * {
     margin: 0;
     padding: 0;
@@ -12,7 +12,7 @@ body {
     font-family: 'Orbitron', sans-serif;
 }
 
-/* Header Section */
+/* Header------------------------------------------------------------------------------------------------- */
 header {
     display: fixed;
     display: flex;
@@ -75,7 +75,7 @@ nav ul li a {
     font-weight: bold;
 }
 
-/* Hero Section */
+/* hero + inicio ------------------------------------------------------------------------------------- */
 .hero {
     display: flex;
     margin: 0;
@@ -148,7 +148,7 @@ nav ul li a {
     transform: translateY(-2px);
 }
 
-/* Descripción Section */
+/* Descripción medio-------------------------------------------------------------------------------------------- */
 .descripcion {
     background: linear-gradient(135deg, #1f1c2c, #928dab);
     padding: 40px;
@@ -186,13 +186,13 @@ nav ul li a {
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
-/* Detalles Section */
+/* Detalles ------------------------------------------------------------------------------------------------------------- */
 .detalles {
     text-align: center;
     padding: 50px 20px;
 }
 
-/* Título principal */
+
 .titulo-detalles {
     font-size: 32px;
     font-weight: bold;
@@ -202,7 +202,7 @@ nav ul li a {
     text-shadow: 0 0 10px rgba(0, 212, 255, 0.8);
 }
 
-/* Grid de los recuadros */
+
 .detalles-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -211,7 +211,7 @@ nav ul li a {
     margin: auto;
 }
 
-/* Estilos de los recuadros */
+
 .detalle-box {
     background: rgba(0, 0, 0, 0.6);
     padding: 25px;
@@ -222,13 +222,13 @@ nav ul li a {
     border: 2px solid rgba(0, 212, 255, 0.7);
 }
 
-/* Efecto dinámico al pasar el ratón */
+
 .detalle-box:hover {
     transform: translateY(-8px);
     box-shadow: 0 0 20px rgba(0, 212, 255, 1);
 }
 
-/* Tipografía dentro de los recuadros */
+
 .detalle-box h3 {
     font-size: 20px;
     color: #00d4ff;
@@ -253,7 +253,7 @@ nav ul li a {
     background: rgba(50, 50, 50, 0.3);
 }
 
-/* Alinear texto dentro de los recuadros */
+
 .detalle-box {
     display: flex;
     flex-direction: column;
@@ -261,7 +261,7 @@ nav ul li a {
     align-items: center;
 }
 
-/* Footer Section */
+/* Footer ---------------------------------------------------------------------------------------------- */
 footer {
     text-align: center;
     padding: 15px;
@@ -272,7 +272,7 @@ footer {
     border-radius: 0 0 10px 10px;
 }
 
-/* Media Queries */
+/* Media Queries----------------------------------------------------------------------------------------------- */
 
 /* Tablets */
 @media (max-width: 768px) {
