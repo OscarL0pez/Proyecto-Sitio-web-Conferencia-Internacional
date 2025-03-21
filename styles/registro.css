@@ -3,7 +3,7 @@ body {
     height: 100%;
     width: 100%;
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #b5b4f4;
     color: #333;
     margin: 0;
     padding: 0;
@@ -84,7 +84,7 @@ main {
     padding: 20px;
     background: white;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 1);
 }
 
 /* Estilos del formulario ---------------------------------------------------------------------------------------*/
@@ -126,7 +126,7 @@ input, select, textarea {
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 1rem;
-    transition: all 0.3s ease-in-out;
+   
 }
 
 #fecha-nacimiento {
@@ -148,7 +148,7 @@ input, select, textarea {
 }
 
 input[type="checkbox"], input[type="radio"] {
-    margin-right: 8px;
+    margin-right: 10px;
 }
 
 select#pais {
@@ -196,7 +196,7 @@ input#cvv {
 
 /* Estilos del botón de pago ----------------------------------------------------------------------------------------------*/
 .btn-pagar {
-    width: 40%;
+    width: 35%;
     background: linear-gradient(90deg, #ff7e00, #ff3c00);
     color: white;
     padding: 12px 15px;
@@ -247,7 +247,8 @@ button.reset-btn:hover {
 /* Contenedor de botones-------------------------------------------------------------------------- */
 .button-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap: 10px;
 }
 
 /* Estilos del footer -----------------------------------------------------------------*/
